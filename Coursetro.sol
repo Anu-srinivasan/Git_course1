@@ -6,14 +6,16 @@ contract Coursetro {
     
    string fName;
    uint age;
-   
-   function setInstructor(string memory _fName, uint _age) public {
+   address id;
+
+   function setInstructor(string memory _fName, uint _age address _id) public {
        fName = _fName;
        age = _age;
+	id=_id;
    }
    
-   function getInstructor() public view returns (string  memory, uint) {
-       return (fName, age);
+   function getInstructor() public view returns (string  memory, uint, address) {
+       return (fName, age, id);
    }
     
 }
